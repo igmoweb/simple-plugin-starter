@@ -105,10 +105,26 @@ module.exports = function(grunt) {
         },
 
         replace: {
-
+            dist: {
+                options: {
+                    patterns: [
+                        {
+                            match: 'plugin-name',
+                            replacement: 'ignacio-plugin'
+                        }
+                    ]
+                },
+                files: [
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['plugin-name.php'],
+                        dest: 'replaced/'
+                    }
+                ]
+            }
         }
     });
-
 
     grunt.registerTask('build', [
         'clean',
@@ -117,4 +133,6 @@ module.exports = function(grunt) {
         'copy',
         'compress'
     ]);
+
+    grunt.registerTask( 'replace', 'replace' );
 };
