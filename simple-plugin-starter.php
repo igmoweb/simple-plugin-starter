@@ -99,6 +99,8 @@ if ( ! class_exists( 'Plugin_Name_Loader' ) ) {
 				return;
 			}
 
+			include_once( 'core/classes/class-plugin-activator.php' );
+
 			if ( false === $saved_version ) {
 				// The plugin has not been activated.
 				// This usually happens on a multisite when the plugin
@@ -107,7 +109,6 @@ if ( ! class_exists( 'Plugin_Name_Loader' ) ) {
 				return;
 			}
 
-			include_once( 'core/classes/class-plugin-activator.php' );
 			Plugin_Name_Activator::upgrade();
 		}
 
