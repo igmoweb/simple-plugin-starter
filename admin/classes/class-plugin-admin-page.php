@@ -10,14 +10,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * @todo replace
+ * Class Plugin_Name_Admin_Page
+ *
+ * Serves as template for all admin pages
  */
 if ( class_exists( 'Plugin_Name_Admin_Page' ) ) {
-	/**
-	 * @todo replace
-	 * Class Plugin_Name_Admin_Page
-	 *
-	 * Serves as template for all admin pages
-	 */
+
 	/**
 	 * @todo replace
 	 */
