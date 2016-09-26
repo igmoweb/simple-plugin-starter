@@ -31,7 +31,7 @@ if ( ! class_exists( 'Plugin_Name_Admin' ) ) {
 
 		private function includes() {
 			include_once( 'admin-functions.php' );
-			include_once( 'classes/class-plugin-admin-page.php' );
+			include_once( 'classes/{{class-plugin}}-admin-page.php' );
 		}
 
 		/**

@@ -74,10 +74,10 @@ if ( ! class_exists( 'Plugin_Name_Loader' ) ) {
 
 		private function includes() {
 			if ( is_admin() ) {
-				include_once 'admin/class-plugin-admin.php';
+				include_once 'admin/{{class-plugin}}-admin.php';
 			}
 
-			include_once 'core/class-plugin-core.php';
+			include_once 'core/{{class-plugin}}-core.php';
 		}
 
 		/**
@@ -99,7 +99,7 @@ if ( ! class_exists( 'Plugin_Name_Loader' ) ) {
 				return;
 			}
 
-			include_once( 'core/classes/class-plugin-activator.php' );
+			include_once( 'core/classes/{{class-plugin}}-activator.php' );
 
 			if ( false === $saved_version ) {
 				// The plugin has not been activated.
@@ -164,7 +164,7 @@ function plugin_name_dir() {
  * Activate the plugin
  */
 function plugin_name_activate() {
-	include_once( 'core/classes/class-plugin-activator.php' );
+	include_once( 'core/classes/{{class-plugin}}-activator.php' );
 	Plugin_Name_Activator::activate();
 }
 register_activation_hook( __FILE__, 'plugin_name_activate' );
@@ -173,7 +173,7 @@ register_activation_hook( __FILE__, 'plugin_name_activate' );
  * Deactivate the plugin
  */
 function plugin_name_deactivate() {
-	include_once( 'core/classes/class-plugin-activator.php' );
+	include_once( 'core/classes/{{class-plugin}}-activator.php' );
 	Plugin_Name_Activator::deactivate();
 }
 register_deactivation_hook( __FILE__, 'plugin_name_activate' );
@@ -182,7 +182,7 @@ register_deactivation_hook( __FILE__, 'plugin_name_activate' );
  * Uninstall the plugin
  */
 function plugin_name_uninstall() {
-	include_once( 'core/classes/class-plugin-activator.php' );
+	include_once( 'core/classes/{{class-plugin}}-activator.php' );
 	Plugin_Name_Activator::uninstall();
 }
 register_uninstall_hook( __FILE__, 'plugin_name_uninstall' );
