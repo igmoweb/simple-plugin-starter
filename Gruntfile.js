@@ -124,12 +124,12 @@ module.exports = function(grunt) {
                 },
                 files: [
                     {expand: true, flatten: true, src: [
-                        './**/*.php',
+                        'src/*.php',
                         '!node_modules/*'
                     ]}
                 ]
             }
-        }
+        },
     });
 
 
