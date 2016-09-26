@@ -6,7 +6,8 @@
 
 ## First steps
 * Install npm dependencies with `npm install`
-* Replace `Plugin_Name`, `plugin-name`... strings in functions, classes and file names for your own one
+* Fill up `package.json` `classes_prefix, textdomain and functions_prefix` fields with your preferences
+* Run `grunt replace`. This will replace class names, functions prefixes and text domains with your preferences
 
 ## Version releases
 Use command `grunt build`. This will generate a zip file inside `build` folder.

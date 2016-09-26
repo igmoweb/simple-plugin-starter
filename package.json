@@ -22,6 +22,5 @@
   "license": "GPLv2",
   "classes_prefix": "Plugin_Name",
   "textdomain": "plugin-name",
-  "functions_prefix": "plugin_name",
-  "files_prefix": "test"
+  "functions_prefix": "plugin_name"
 }
