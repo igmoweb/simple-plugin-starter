@@ -9,16 +9,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * @todo replace
  * Class {{Plugin_Name}}_Admin_Page
  *
  * Serves as template for all admin pages
  */
 if ( class_exists( '{{Plugin_Name}}_Admin_Page' ) ) {
 
-	/**
-	 * @todo replace
-	 */
 	class {{Plugin_Name}}_Admin_Page {
 
 		/**
@@ -36,7 +32,6 @@ if ( class_exists( '{{Plugin_Name}}_Admin_Page' ) ) {
 		public $page_id = null;
 
 		/**
-		 * @todo replace
 		 * {{Plugin_Name}}_Admin_Page constructor.
 		 *
 		 * @param string $slug Unique page slug
@@ -90,9 +85,6 @@ if ( class_exists( '{{Plugin_Name}}_Admin_Page' ) ) {
 		 * By default, it loads views/$slug-page.php file
 		 */
 		protected function display() {
-			/**
-			 * @todo replace
-			 */
 			{{plugin_name}}_load_admin_view( "{$this->slug}-page" );
 		}
 
@@ -100,7 +92,6 @@ if ( class_exists( '{{Plugin_Name}}_Admin_Page' ) ) {
 		 * Render the page
 		 */
 		public function render() {
-			// @todo replace
 			?>
 			<div id="container" class="wrap wrap-<?php echo esc_attr( {{plugin_name}}_slug() ); ?>">
 				<?php $this->display(); ?>

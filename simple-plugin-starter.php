@@ -9,7 +9,7 @@ Author URI:
 License:        GPL2
 License URI:    https://www.gnu.org/licenses/gpl-2.0.html
 Domain Path:    /languages
-Text Domain:    plugin-name
+Text Domain:    {{plugin-name}}
 */
 
 /**
@@ -123,13 +123,10 @@ if ( ! class_exists( '{{Plugin_Name}}_Loader' ) ) {
  * Return the plugin unique instance
  *
  * @return {{Plugin_Name}}_Loader
- * @todo replace
  */
 function {{plugin_name}}() {
-	// @todo replace
 	return {{Plugin_Name}}_Loader::get_instance();
 }
-// @todo replace
 add_action( 'plugins_loaded', 'plugin_name' );
 
 
@@ -139,7 +136,7 @@ add_action( 'plugins_loaded', 'plugin_name' );
  * @return string
  */
 function {{plugin_name}}_slug() {
-	return 'plugin-name';
+	return '{{plugin-name}}';
 }
 
 

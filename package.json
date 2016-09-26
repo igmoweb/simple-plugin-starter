@@ -19,5 +19,8 @@
     "load-grunt-tasks": "~0.2.0"
   },
   "author": "igmoweb",
-  "license": "GPLv2"
+  "license": "GPLv2",
+  "classes_prefix": "Plugin_Name_",
+  "textdomain": "plugin-name",
+  "functions_prefix": "plugin_name_"
 }
