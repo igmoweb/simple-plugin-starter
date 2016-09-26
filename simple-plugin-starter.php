@@ -9,7 +9,7 @@ Author URI:
 License:        GPL2
 License URI:    https://www.gnu.org/licenses/gpl-2.0.html
 Domain Path:    /languages
-Text Domain:    plugin-name
+Text Domain:    {{plugin-name}}
 */
 
 /**
@@ -136,7 +136,7 @@ add_action( 'plugins_loaded', 'plugin_name' );
  * @return string
  */
 function plugin_name_slug() {
-	return 'plugin-name';
+	return '{{plugin-name}}';
 }
 
 
