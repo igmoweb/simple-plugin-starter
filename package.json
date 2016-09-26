@@ -20,7 +20,7 @@
   },
   "author": "igmoweb",
   "license": "GPLv2",
-  "classes_prefix": "Plugin_Name_",
+  "classes_prefix": "Plugin_Name",
   "textdomain": "plugin-name",
-  "functions_prefix": "plugin_name_"
+  "functions_prefix": "plugin_name"
 }
