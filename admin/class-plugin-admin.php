@@ -8,17 +8,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'Plugin_Name_Admin' ) ) {
+if ( ! class_exists( '{{Plugin_Name}}_Admin' ) ) {
 
 	/**
-	 * Class Plugin_Name_Admin
+	 * Class {{Plugin_Name}}_Admin
 	 *
 	 * Manages the admin side of the plugin
 	 */
-	class Plugin_Name_Admin {
+	class {{Plugin_Name}}_Admin {
 
 		/**
-		 * Save a list of Plugin_Name_Admin_Page instances
+		 * Save a list of {{Plugin_Name}}_Admin_Page instances
 		 * @var array
 		 */
 		public $pages = array();
@@ -53,7 +53,7 @@ if ( ! class_exists( 'Plugin_Name_Admin' ) ) {
 		 * @return string
 		 */
 		public function view( $path, $args = array(), $echo = true ) {
-			$file = plugin_name_dir() . "admin/views/$path.php";
+			$file = {{plugin_name}}_dir() . "admin/views/$path.php";
 			$content = '';
 
 			if ( is_file ( $file ) ) {

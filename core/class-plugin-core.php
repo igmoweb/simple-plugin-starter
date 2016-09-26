@@ -9,12 +9,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'Plugin_Name_Core' ) ) {
+if ( ! class_exists( '{{Plugin_Name}}_Core' ) ) {
 
 	/**
-	 * Class Plugin_Name_Core
+	 * Class {{Plugin_Name}}_Core
 	 */
-	class Plugin_Name_Core {
+	class {{Plugin_Name}}_Core {
 
 		public function __construct() {
 			$this->includes();
