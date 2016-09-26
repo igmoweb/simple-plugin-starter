@@ -9,11 +9,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * @see Plugin_Name_Admin::view()
+ * @see {{Plugin_Name}}_Admin::view()
  * @todo replace
  */
-function plugin_name_load_admin_view( $path, $args = array(), $echo = true ) {
+function {{plugin_name}}_load_admin_view( $path, $args = array(), $echo = true ) {
 	// @todo replace
-	$plugin = plugin_name();
+	$plugin = {{plugin_name}}();
 	$plugin->admin->view( $path, $args, $echo );
 }

@@ -10,16 +10,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * @todo replace
- * Class Plugin_Name_Admin_Page
+ * Class {{Plugin_Name}}_Admin_Page
  *
  * Serves as template for all admin pages
  */
-if ( class_exists( 'Plugin_Name_Admin_Page' ) ) {
+if ( class_exists( '{{Plugin_Name}}_Admin_Page' ) ) {
 
 	/**
 	 * @todo replace
 	 */
-	class Plugin_Name_Admin_Page {
+	class {{Plugin_Name}}_Admin_Page {
 
 		/**
 		 * Page unique slug
@@ -37,7 +37,7 @@ if ( class_exists( 'Plugin_Name_Admin_Page' ) ) {
 
 		/**
 		 * @todo replace
-		 * Plugin_Name_Admin_Page constructor.
+		 * {{Plugin_Name}}_Admin_Page constructor.
 		 *
 		 * @param string $slug Unique page slug
 		 * @param string $page_title
@@ -93,7 +93,7 @@ if ( class_exists( 'Plugin_Name_Admin_Page' ) ) {
 			/**
 			 * @todo replace
 			 */
-			plugin_name_load_admin_view( "{$this->slug}-page" );
+			{{plugin_name}}_load_admin_view( "{$this->slug}-page" );
 		}
 
 		/**
@@ -102,7 +102,7 @@ if ( class_exists( 'Plugin_Name_Admin_Page' ) ) {
 		public function render() {
 			// @todo replace
 			?>
-			<div id="container" class="wrap wrap-<?php echo esc_attr( plugin_name_slug() ); ?>">
+			<div id="container" class="wrap wrap-<?php echo esc_attr( {{plugin_name}}_slug() ); ?>">
 				<?php $this->display(); ?>
 			</div><!-- end container -->
 			<?php
