@@ -122,7 +122,7 @@ module.exports = function(grunt) {
                         },
                         {
                             match: /\{\{class\-plugin\}\}/g,
-                            replacement: '<%= pkg.files_prefix %>'
+                            replacement: 'class-<%= pkg.files_prefix %>'
                         }
                     ]
                 },
