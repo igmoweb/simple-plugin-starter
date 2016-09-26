@@ -123,7 +123,7 @@ module.exports = function(grunt) {
                     ]
                 },
                 files: [
-                    {expand: true, flatten: true, src: [
+                    {expand: true, src: [
                         './**/*.php',
                         '!node_modules/*'
                     ]}
