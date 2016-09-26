@@ -9,13 +9,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( '{{Plugin_Name}}_Activator' ) ) {
+if ( ! class_exists( 'Plugin_Name_Activator' ) ) {
 	/**
-	 * Class {{Plugin_Name}}_Activator
+	 * Class Plugin_Name_Activator
 	 *
 	 * Manages the activation of the plugin
 	 */
-	class {{Plugin_Name}}_Activator {
+	class Plugin_Name_Activator {
 
 		/**
 		 * Run on plugin activation

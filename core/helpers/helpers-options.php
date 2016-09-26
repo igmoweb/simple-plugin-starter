@@ -18,8 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @return mixed|void
  */
-function {{plugin_name}}_get_option( $name, $default = false ) {
-	return get_option( {{plugin_name}}_slug() . '-' . $name, $default );
+function plugin_name_get_option( $name, $default = false ) {
+	return get_option( plugin_name_slug() . '-' . $name, $default );
 }
 
 /**
@@ -30,8 +30,8 @@ function {{plugin_name}}_get_option( $name, $default = false ) {
  *
  * @return mixed|void
  */
-function {{plugin_name}}_update_option( $name, $value ) {
-	return update_option( {{plugin_name}}_slug() . '-' . $name, $value );
+function plugin_name_update_option( $name, $value ) {
+	return update_option( plugin_name_slug() . '-' . $name, $value );
 }
 
 /**
@@ -41,15 +41,15 @@ function {{plugin_name}}_update_option( $name, $value ) {
  *
  * @return array
  */
-function {{plugin_name}}_get_settings( $group = '' ) {
+function plugin_name_get_settings( $group = '' ) {
 	$option_name = 'settings';
 	if ( $group ) {
 		$option_name .= "-{$group}";
 	}
 
 	return wp_parse_args(
-		{{plugin_name}}_get_option( $option_name, array() ),
-		{{plugin_name}}_get_default_settings( $group )
+		plugin_name_get_option( $option_name, array() ),
+		plugin_name_get_default_settings( $group )
 	);
 }
 
@@ -61,8 +61,8 @@ function {{plugin_name}}_get_settings( $group = '' ) {
  *
  * @return bool|mixed
  */
-function {{plugin_name}}_get_setting( $name, $group = '' ) {
-	$settings = {{plugin_name}}_get_settings( $group );
+function plugin_name_get_setting( $name, $group = '' ) {
+	$settings = plugin_name_get_settings( $group );
 	return isset( $settings[ $name ] ) ? $settings[ $name ] : false;
 }
 
@@ -73,7 +73,7 @@ function {{plugin_name}}_get_setting( $name, $group = '' ) {
  *
  * @return mixed|void
  */
-function {{plugin_name}}_get_default_settings( $group = '' ) {
+function plugin_name_get_default_settings( $group = '' ) {
 	$all_defaults = array(
 		'' => array(),
 		'group1' => array()
@@ -90,7 +90,7 @@ function {{plugin_name}}_get_default_settings( $group = '' ) {
 	 * @var array $defaults Default settings for a given group
 	 * @var string $group Group slug
 	 */
-	return apply_filters( '{{plugin_name}}_default_settings', $defaults, $group );
+	return apply_filters( 'plugin_name_default_settings', $defaults, $group );
 }
 
 /**
@@ -100,8 +100,8 @@ function {{plugin_name}}_get_default_settings( $group = '' ) {
  * @param $value
  * @param string $group
  */
-function {{plugin_name}}_update_setting( $name, $value, $group = '' ) {
-	$settings = {{plugin_name}}_get_settings( $group );
+function plugin_name_update_setting( $name, $value, $group = '' ) {
+	$settings = plugin_name_get_settings( $group );
 	$settings[ $name ] = $value;
 
 }
@@ -112,11 +112,11 @@ function {{plugin_name}}_update_setting( $name, $value, $group = '' ) {
  * @param array $new_settings
  * @param string $group
  */
-function {{plugin_name}}_update_settings( $new_settings, $group = '' ) {
+function plugin_name_update_settings( $new_settings, $group = '' ) {
 	$option_name = 'settings';
 	if ( $group ) {
 		$option_name .= "-{$group}";
 	}
 
-	{{plugin_name}}_update_option( $option_name, $new_settings );
+	plugin_name_update_option( $option_name, $new_settings );
 }
