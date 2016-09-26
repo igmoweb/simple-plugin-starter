@@ -11,7 +11,6 @@
     "grunt-contrib-compress": "~0.8.0",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-rename": "0.0.3",
     "grunt-contrib-uglify": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-potomo": "~2.1.0",
