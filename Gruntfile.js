@@ -133,7 +133,7 @@ module.exports = function(grunt) {
                     ]}
                 ]
             }
-        },
+        }
     });
 
 
