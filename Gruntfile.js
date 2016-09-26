@@ -109,13 +109,16 @@ module.exports = function(grunt) {
                 options: {
                     patterns: [
                         {
-                            match: '{{plugin-name}}',
+                            match: /\{\{plugin\-name\}\}/,
                             replacement: '<%= pkg.textdomain %>'
                         }
                     ]
                 },
                 files: [
-                    {expand: true, flatten: true, src: ['./**/*.php']}
+                    {expand: true, flatten: true, src: [
+                        './**/*.php',
+                        '!node_modules/*'
+                    ]}
                 ]
             }
         }
