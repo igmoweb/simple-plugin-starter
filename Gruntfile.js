@@ -109,7 +109,7 @@ module.exports = function(grunt) {
                 options: {
                     patterns: [
                         {
-                            match: /\{\{plugin\-name\}\}/,
+                            match: /\{\{plugin\-name\}\}/g,
                             replacement: '<%= pkg.textdomain %>'
                         }
                     ]
